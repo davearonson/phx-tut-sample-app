@@ -17,6 +17,9 @@ defmodule SampleAppWeb do
   and import those modules here.
   """
 
+  # exported constant, sorta
+  def base_title, do: "Phoenix Tutorial Sample App"
+
   def controller do
     quote do
       use Phoenix.Controller, namespace: SampleAppWeb

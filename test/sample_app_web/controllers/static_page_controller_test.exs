@@ -7,7 +7,7 @@ defmodule SampleAppWeb.StaticPageControllerTest do
     assert html_response(conn, 200)
 
     html_response(conn, 200)
-    |> assert_select("title", "Home | Phoenix Tutorial Sample App")
+    |> assert_select("title", "Home | #{SampleAppWeb.base_title}")
   end
 
   test "should get help", %{conn: conn} do
@@ -16,7 +16,7 @@ defmodule SampleAppWeb.StaticPageControllerTest do
     assert html_response(conn, 200)
 
     html_response(conn, 200)
-    |> assert_select("title", "Help | Phoenix Tutorial Sample App")
+    |> assert_select("title", "Help | #{SampleAppWeb.base_title}")
   end
 
   test "should get about", %{conn: conn} do
@@ -25,6 +25,6 @@ defmodule SampleAppWeb.StaticPageControllerTest do
     assert html_response(conn, 200)
 
     html_response(conn, 200)
-    |> assert_select("title", "About | Phoenix Tutorial Sample App")
+    |> assert_select("title", "About | #{SampleAppWeb.base_title}")
   end
 end
