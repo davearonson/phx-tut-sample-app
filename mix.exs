@@ -20,7 +20,9 @@ defmodule SampleApp.MixProject do
   def application do
     [
       mod: {SampleApp.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      # need :inets cuz we're using Elixir 1.15, not 1.06,
+      # "minor" version change my sweet ass!
+      extra_applications: [:inets, :logger, :runtime_tools]
     ]
   end
 
