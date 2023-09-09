@@ -1,5 +1,12 @@
-<main class="container">
-  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-  <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-  <%= @inner_content %>
-</main>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      <%= SampleAppWeb.DynamicTextHelpers.page_title(Enum.into(assigns,
+      %{action: @conn.private.phoenix_action})) %>
+    </title>
+  </head>
+  <body>
+    <%= @inner_content %>
+  </body>
+</html>
