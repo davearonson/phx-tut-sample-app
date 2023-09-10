@@ -5,14 +5,14 @@ defmodule SampleAppWeb.StaticPageControllerTest do
     conn = get(conn, Routes.root_path(conn, :home))
 
     html_response(conn, 200)
-    |> assert_select("title", "Home | #{SampleAppWeb.base_title}")
+    |> assert_select("title", "Phoenix Tutorial Sample App")
   end
   
   test "should get home", %{conn: conn} do
     conn = get(conn, Routes.static_page_path(conn, :home))
 
     html_response(conn, 200)
-    |> assert_select("title", "Home | #{SampleAppWeb.base_title}")
+    |> assert_select("title", "Phoenix Tutorial Sample App")
   end
 
   test "should get help", %{conn: conn} do

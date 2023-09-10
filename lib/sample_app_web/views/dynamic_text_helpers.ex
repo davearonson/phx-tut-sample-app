@@ -14,6 +14,8 @@ defmodule SampleAppWeb.DynamicTextHelpers do
     [title, " | ", @base_title]
   end
 
+  defp get_page_title(%{action: :home}), do: nil
+
   defp get_page_title(%{action: action}),
     do: action |> Atom.to_string |> String.capitalize
 
